@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save oc-modal-library
+npm install --save @timout13/oc-modal-library
 ```
 
 ## Usage

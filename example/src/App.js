@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from "react";
 
-import { ExampleComponent } from 'oc-modal-library'
+import { Modal } from 'oc-modal-library'
 import 'oc-modal-library/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+ const  [isOpen,setIsOpen]= useState();
+  return (
+    <>
+      <button onClick={()=>setIsOpen(true)}>ouvrir</button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <h2>Ceci est un test, le bouton ne fait rien :</h2>
+        <button>Aucune action</button>
+      </Modal>
+    </>
+  );
 }
 
 export default App
